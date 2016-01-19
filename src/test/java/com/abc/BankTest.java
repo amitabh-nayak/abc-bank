@@ -1,5 +1,6 @@
 package com.abc;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -48,7 +49,19 @@ public class BankTest {
 
         checkingAccount.deposit(3000.0);
 
-        assertEquals(170.0, bank.totalInterestPaid(), DOUBLE_DELTA);
+        assertEquals(150.0, bank.totalInterestPaid(), DOUBLE_DELTA);
+    }
+    
+    @Ignore
+    public void maxi_savings_account_one_percent_interest() {
+       //Need to add test cases for MAXI_ACCOUNT with several transactions of type withdrawl
+    	// in past 10 days and vrify that interest rate accrued at 1%
+    }
+    
+    @Ignore
+    public void maxi_savings_account_five_percent_interest() {
+       //Need to add test cases for MAXI_ACCOUNT with several transactions of type deposit
+    	// in past 10 days and vrify that interest rate accrued at 5%
     }
 
 }

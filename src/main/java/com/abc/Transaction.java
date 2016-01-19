@@ -1,16 +1,35 @@
 package com.abc;
 
-import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * 
+ * In order to maintain consistency transaction and its attributes have to be atomic
+ *
+ */
 public class Transaction {
-    public final double amount;
+    
+	private final double amount;
+    private final Date transactionDate;
+    private final TransactionType transactionType;
 
-    private Date transactionDate;
-
-    public Transaction(double amount) {
+    public Transaction(double amount, TransactionType transactionType) {
         this.amount = amount;
-        this.transactionDate = DateProvider.getInstance().now();
+        this.transactionType = transactionType;
+        this.transactionDate = DateProvider.now();
     }
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public Date getTransactionDate() {
+		return transactionDate;
+	}
+
+	public TransactionType getTransactionType() {
+		return transactionType;
+	}
+    
 
 }
