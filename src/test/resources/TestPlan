@@ -1,0 +1,11 @@
+1. Functional Test Cases
+	1. Add test case to test whether user is authorized the transaction
+	2. Add test cases to validate customer transactions like deposit, withdraw, balance transfer
+	3. Add test cases to validate transaction attributes
+	4. Add test cases to validate manager related transactions like report generation
+	5. Add test cases to test bank related transactions
+    6. Add test cases to test all valid transactions with illegal values
+2. Code Coverage Test Cases
+    1. Add test cases to test domain objects and functions so that code coverage is more than 80%
+3. Need Jenkin  and Cobertura utility plugin to run continuous integration and code coverage job
+  
